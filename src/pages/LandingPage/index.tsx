@@ -1,5 +1,10 @@
 // pages/index.tsx
 import Head from 'next/head';
+import Image from 'next/image';
+import LightbulbIcon from '@/assets/svg/undraw_google_docs_re_evm3.svg';
+import ValidateIcon from '@/assets/svg/undraw_specs_re_546x.svg';
+import DiscoverIcon from '@/assets/svg/undraw_process_re_gws7.svg';
+import CollaborateIcon from '@/assets/svg/undraw_working_re_ddwy.svg';
 
 export default function LandingPage() {
   return (
@@ -44,7 +49,7 @@ export default function LandingPage() {
                 <li><a>Item 3</a></li>
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl">daisyUI</a>
+            <a className="btn btn-ghost text-xl">Echo Thoughts</a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
@@ -67,64 +72,67 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="bg-gray-100 py-16 text-center">
-        <h2 className="text-4xl font-bold mb-4">Turn Ideas Into Reality</h2>
-        <p className="text-gray-700 mb-6">Share your SaaS ideas, validate them with the community, and discover what resonates.</p>
-        <a href="#join" className="btn btn-primary">
-          Get Started
-        </a>
-      </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-16 px-6">
-        <h3 className="text-3xl font-bold text-center mb-8">Why Use Echo-Thoughts?</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="card bg-white shadow-md rounded p-6">
-            <h4 className="font-bold text-xl mb-2">Validate Your Ideas</h4>
-            <p className="text-gray-600">Submit ideas and receive real-time feedback from the community.</p>
-          </div>
-          <div className="card bg-white shadow-md rounded p-6">
-            <h4 className="font-bold text-xl mb-2">Discover Trends</h4>
-            <p className="text-gray-600">See what resonates and what doesn’t, based on voting and comments.</p>
-          </div>
-          <div className="card bg-white shadow-md rounded p-6">
-            <h4 className="font-bold text-xl mb-2">Collaborate</h4>
-            <p className="text-gray-600">Join forces with like-minded individuals to bring ideas to life.</p>
-          </div>
-        </div>
-      </section>
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gray-100 py-16 ">
+          <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center max-w-7xl">
+            {/* Left Content Section */}
+            <div className="text-center lg:text-left lg:w-1/2 mb-8 lg:mb-0">
+              <h2 className="text-4xl font-bold mb-4">Turn Ideas Into Reality</h2>
+              <p className="text-gray-700 mb-6">
+                Share your SaaS ideas, validate them with the community, and discover what resonates.
+              </p>
+              <a href="#join" className="btn btn-primary">
+                Get Started
+              </a>
+            </div>
 
-      {/* How It Works Section */}
-      <section id="how-it-works" className="bg-gray-100 py-16 px-6">
-        <h3 className="text-3xl font-bold text-center mb-8">How It Works</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div>
-            <span className="block bg-blue-600 text-white w-12 h-12 rounded-full mx-auto mb-4">1</span>
-            <h4 className="font-bold text-xl mb-2">Submit Your Idea</h4>
-            <p className="text-gray-600">Share your idea with the community and start gathering feedback.</p>
+            {/* Right Image Section */}
+            <div className="lg:w-1/2 flex justify-center">
+              <Image priority src={LightbulbIcon} alt="Lightbulb of Ideas" height={500} />
+            </div>
           </div>
-          <div>
-            <span className="block bg-blue-600 text-white w-12 h-12 rounded-full mx-auto mb-4">2</span>
-            <h4 className="font-bold text-xl mb-2">Get Votes & Feedback</h4>
-            <p className="text-gray-600">Engage with the community to see if your idea has potential.</p>
-          </div>
-          <div>
-            <span className="block bg-blue-600 text-white w-12 h-12 rounded-full mx-auto mb-4">3</span>
-            <h4 className="font-bold text-xl mb-2">Refine & Launch</h4>
-            <p className="text-gray-600">Use the insights to improve and bring your idea to life.</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Join Section */}
-      <section id="join" className="py-16 text-center">
-        <h3 className="text-3xl font-bold mb-4">Ready to Share Your Idea?</h3>
-        <p className="text-gray-700 mb-6">Join Echo-Thoughts today and start validating your ideas with the community!</p>
-        <a href="#" className="btn btn-accent">
-          Sign Up Now
-        </a>
-      </section>
+
+        {/* Features Section */}
+        <section id="features" className="py-16 px-6">
+          <h3 className="text-3xl font-bold text-center mb-8">Why Use Echo-Thoughts?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="card bg-white shadow-md rounded p-6">
+              <div className="flex justify-center mb-4">
+                <Image src={ValidateIcon} alt="Validate Icon" className="w-48 h-48" />
+              </div>
+              <h4 className="font-bold text-xl mb-2">Validate Your Ideas</h4>
+              <p className="text-gray-600">Submit ideas and receive real-time feedback from the community.</p>
+            </div>
+            <div className="card bg-white shadow-md rounded p-6">
+              <div className="flex justify-center mb-4">
+                <Image src={DiscoverIcon} alt="Validate Icon" className="w-48 h-48" />
+              </div>
+              <h4 className="font-bold text-xl mb-2">Discover Trends</h4>
+              <p className="text-gray-600">See what resonates and what doesn’t, based on voting and comments.</p>
+            </div>
+            <div className="card bg-white shadow-md rounded p-6">
+              <div className="flex justify-center mb-4">
+                <Image src={CollaborateIcon} alt="Validate Icon" className="w-48 h-48" />
+              </div>
+              <h4 className="font-bold text-xl mb-2">Collaborate</h4>
+              <p className="text-gray-600">Join forces with like-minded individuals to bring ideas to life.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Join Section */}
+        <section id="join" className="py-16 text-center">
+          <h3 className="text-3xl font-bold mb-4">Ready to Share Your Idea?</h3>
+          <p className="text-gray-700 mb-6">Join Echo-Thoughts today and start validating your ideas with the community!</p>
+          <a href="#" className="btn btn-accent">
+            Sign Up Now
+          </a>
+        </section>
+      </main>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-4 text-center">
